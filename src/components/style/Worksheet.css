@@ -1,0 +1,77 @@
+/* .recent-sales table {
+   
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+  }
+  
+  .recent-sales table tr td{
+    text-align: center;
+   
+  }
+  
+  
+  .recent-sales table tr td:nth-child(1){
+    
+    text-align: left;
+    padding-left: 30px;
+  }
+  
+  .recent-sales table tbody tr:nth-child(even){
+    background-color: #b0bfdb;
+  }
+  .recent-sales table tbody tr:nth-child(odd){
+    background-color: #ebeef1;
+  }
+  .recent-sales table thead tr{
+    background-color: #4278dd;
+    color: white;
+  }
+  table th, table td {
+    padding: 15px 0px;
+  }
+  table thead th  {
+    text-align: left;
+    padding-left: 30px ;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+  }
+  
+  .table-risk{
+    margin-top: 50px;
+    border-radius: 0%;
+ 
+  }
+  .table-risk td{
+    border-collapse: collapse;
+  border-bottom: 1px solid black;
+  }
+  .table-risk tr:nth-child(3){
+    background-color: #64b1e9;
+  } */
+  .name-div{
+    text-align: center;
+    margin: 20px;
+  }
+ 
+  .commentdiv{
+    width: 100%;
+   border-radius: 10px;
+    /* height:200px; */
+    padding: 20px;
+    box-shadow: 0 6px 10px rgba(6, 6, 6, 0.642);
+  }
+  .radioNo input[type="radio"]:checked+label {
+    accent-color : rgb(145, 21, 21);
+    color: #2BD47D;
+  
+  }
+  
+  .radioNo input[type="radio"]:checked + label{
+    accent-color : green;
+    color: red  ;
+  }
+  
+  
