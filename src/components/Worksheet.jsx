@@ -121,7 +121,7 @@ const Worksheet = () => {
 
   return (
     <>
-      <Box
+      {/* <Box
         component="main"
         sx={{
           backgroundColor: (theme) =>
@@ -133,9 +133,9 @@ const Worksheet = () => {
           overflow: "auto",
           marginTop: "60px",
         }}
-      >
-        <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-          <Grid container spacing={3}>
+      > */}
+        <Container maxWidth="lg" sx={{ mt: 10, mb: 4 }}>
+          <Grid container spacing={3} >
             {/* Chart */}
             <Grid item xs={12} md={8} lg={8}>
               <Paper
@@ -334,7 +334,7 @@ const Worksheet = () => {
             {/* Recent Orders */}
           </Grid>
         </Container>
-      </Box>
+      {/* </Box> */}
     </>
   );
 };

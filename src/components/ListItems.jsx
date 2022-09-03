@@ -14,7 +14,7 @@ import {Link, Navigate} from "react-router-dom";
 export const MainListItems = (props) => {
   return (
     <React.Fragment>
-      <Link to='/' >
+      <Link style={{color:"#282c34",textDecoration:"none"}} to='/'>
         <ListItemButton >
           <ListItemIcon>
             <DashboardIcon />
@@ -23,7 +23,7 @@ export const MainListItems = (props) => {
         </ListItemButton>
       </Link>
 
-      <Link to='/cards'>
+      <Link style={{color:"#282c34",textDecoration:"none"}} to='/cards'>
       <ListItemButton onClick={()=>props.show('orders')}>
         <ListItemIcon>
           <ShoppingCartIcon />
@@ -31,21 +31,23 @@ export const MainListItems = (props) => {
         <ListItemText primary="Cards" />
       </ListItemButton>
       </Link>
-      <Link to='/worksheet'>
-      <ListItemButton onClick={()=>props.show('customers')}>
+      <Link style={{color:"#282c34",textDecoration:"none"}} to='/worksheet'>
+      <ListItemButton onClick={()=>props.show('Worksheet')}>
         <ListItemIcon>
           <PeopleIcon />
         </ListItemIcon>
         <ListItemText primary="Worksheet" />
       </ListItemButton>
       </Link>
-
+      <Link style={{color:"#282c34",textDecoration:"none"}} to='/directive'>
       <ListItemButton onClick={()=>props.show('reports')}>
         <ListItemIcon>
           <BarChartIcon />
         </ListItemIcon>
+
         <ListItemText primary="Reports" />
       </ListItemButton>
+      </Link>
       <ListItemButton>
         <ListItemIcon>
           <LayersIcon />

@@ -25,6 +25,8 @@ import { Route,  BrowserRouter as Router, Routes } from "react-router-dom";
 import Chart1 from './Chart1';
 import Cards from './Cards';
 import Worksheet from './Worksheet';
+import Directive from './pages/Directive';
+import Directmanage from './pages/Directmanage';
 // import Deposits from './Deposits';
 // import Orders from './Orders';
 
@@ -64,7 +66,7 @@ const AppBar = styled(MuiAppBar, {
 const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
     '& .MuiDrawer-paper': {
-      position: 'relative',
+      position: 'sticky',
       whiteSpace: 'nowrap',
       width: drawerWidth,
       transition: theme.transitions.create('width', {
@@ -96,18 +98,7 @@ function DashboardContent() {
   const toggleDrawer = () => {
     setOpen(!open);
   };
-  const component = <Box
-  component="main"
-  sx={{
-    backgroundColor: (theme) =>
-      theme.palette.mode === 'light'
-        ? theme.palette.grey[100]
-        : theme.palette.grey[900],
-    flexGrow: 1,
-    height: '100vh',
-    overflow: 'auto',
-  }}
->
+  const component = <>
   <Toolbar />
   <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
     <Grid container spacing={3}>
@@ -150,8 +141,9 @@ function DashboardContent() {
     </Grid>
     <Copyright sx={{ pt: 4 }} />
   </Container>
-</Box>
-  // const paths = ['dashboard', 'orders', 'customers', 'reports', 'integrations']
+</>
+ 
+ // const paths = ['dashboard', 'orders', 'customers', 'reports', 'integrations']
   // const ShowComp = (comp)=>{
   //   console.log(comp)
   //   switch(comp){
@@ -216,7 +208,6 @@ function DashboardContent() {
   //     case 'orders':
   //       setComponent(<h1>Orders</h1>)
   //       break;
-      
   //   }
   // }
 
@@ -278,6 +269,19 @@ function DashboardContent() {
             <SecondaryListItems />
           </List>
         </Drawer>
+        <Box
+  component="main"
+  sx={{
+    backgroundColor: (theme) =>
+      theme.palette.mode === 'light'
+        ? theme.palette.grey[100]
+        : theme.palette.grey[900],
+    flexGrow: 1,
+    height: '100vh',
+    overflow: 'auto',
+    // marginTop:"60px",
+  }}
+>
         {/* {<Show />} */}
         {/* {component} */}
         {
@@ -286,9 +290,9 @@ function DashboardContent() {
              <Route exact path="/" element={component } />
              <Route exact path="/cards" element={<Cards />} />
            <Route path="/worksheet" element={<Worksheet/>} />
-            {/* <Route  path="master" element={<Worksheet/>}/>
+            <Route  path="/directive" element={<Directmanage/>}/>
             
-            <Route path="card" element={<Cards/>} /> */}
+            {/* <Route path="card" element={<Cards/>} /> */}
             {/* <Route path="violations" element={<Navbarcard/>} />   */}
       
           </Routes>
@@ -296,6 +300,7 @@ function DashboardContent() {
          
     
         }
+        </Box>
       </Box>
     </ThemeProvider>
   );

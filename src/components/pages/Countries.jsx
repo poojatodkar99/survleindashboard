@@ -97,7 +97,7 @@ const title = "Countries";
 const CustomizeButton = styled(Button)(({ theme }) => ({
   color: theme.palette.getContrastText(purple[500]),
   backgroundColor: "#ea6",
-  margin:'10px 0',
+  margin: "10px 0",
   borderRadius: "15px",
 
   "&:hover": {
@@ -115,7 +115,7 @@ const Search = styled("div")(({ theme }) => ({
   },
   marginRight: theme.spacing(2),
   marginLeft: 0,
-  margin:'10px 0',
+  margin: "10px 0",
   // width: '300px',
   borderRadius: "20px",
   border: "1px solid #ea6",
@@ -149,7 +149,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const Countries = () => {
+const Countries = (props) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -160,30 +160,33 @@ const Countries = () => {
   return (
     <>
       <Modalpopup show={show} open={open} handleClose={handleClose} />
-      <div
-        style={{
-          display: "flex",
-          backgroundColor: "#ea6",
-          color: "#fff",
-          position: "relative",
-          justifyContent: "space-between",
-        }}
-      >
-        <div style={{ height: "100px", marginLeft: "10px" }}>
-          <ArrowBackIcon />
+      <div className="country-title" >
+        <div style={{ marginLeft: "10px" }}>
+          <IconButton
+            aria-label="arrowback"
+            onClick={() => {
+              props.setActive(false);
+              props.setPresentComp(null);
+            }}
+          >
+            <ArrowBackIcon />
+          </IconButton>
 
           <div style={{ color: "#fff" }}>
-            <span style={{ fontSize: "40px" }}>Countries</span>
+            <span className="span-text">Countries</span>
           </div>
         </div>
         <div>
           {" "}
-          <span style={{ fontSize: "25px", margin: "10px" }}>Directives</span>
-          <div >
+          <span className="span-text" style={{ margin: "10px" }}>
+            Directives
+          </span>
+          <div>
             <Tooltip title="Organize">
-              <IconButton sx={{
-                float:"right"
-              }}
+              <IconButton
+                sx={{
+                  float: "right",
+                }}
                 onClick={() => {
                   setShow(<Organize />);
                   handleOpen();
@@ -201,7 +204,7 @@ const Countries = () => {
         style={{
           margin: "50px 0",
           display: "flex",
-          flexWrap:'wrap',
+          flexWrap: "wrap",
           justifyContent: "space-around",
         }}
       >

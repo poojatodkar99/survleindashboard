@@ -259,7 +259,7 @@ export default function EnhancedTable(props) {
                 .map((row, index) => {
                   const isItemSelected = isSelected(row.name);
                   const labelId = `enhanced-table-checkbox-${index}`;
-
+                  console.log(row);
                   return (
                     <TableRow
                       hover

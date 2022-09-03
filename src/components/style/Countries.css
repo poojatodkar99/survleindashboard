@@ -11,3 +11,31 @@
 } */
 
 /**************************************************** END of  Edit Entry ******************************************** */
+
+.country-title{
+    display:flex;
+    background-color: #ea6;
+    color: #fff;
+    position: relative;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    
+  }
+
+  .span-text{
+    font-size: 40px;
+}
+
+@media screen and (max-width:1072px) {
+    .country-title{
+        font-size: 20px;
+     
+
+}
+/* .span-text{
+    font-size: 20pxpx;
+} */
+
+
+}

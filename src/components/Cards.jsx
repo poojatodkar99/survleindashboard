@@ -27,13 +27,13 @@ import Countries from "./pages/Countries";
 
 const Cards = () => {
   const [active,setActive] = useState(false)
-  const [PresentComp,setPresentComp] = useState(<></>)
+  const [PresentComp,setPresentComp] = useState(null)
 
   const switchComp = (item)=>{
     
     switch(item){
       case 'countries':{
-      setPresentComp(<Countries/>)
+      setPresentComp(<Countries setPresentComp={setPresentComp} setActive={setActive}/>)
       break;
       }
       case 'currencies':{
@@ -101,9 +101,12 @@ const Cards = () => {
               ? theme.palette.grey[100]
               : theme.palette.grey[900],
           flexGrow: 1,
-          height: "100vh",
-          overflow: "auto",
+          // height: "100vh",
+          // overflow: "auto",
           marginTop: "60px",
+          
+        
+          
         }}
       >
         <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
@@ -150,7 +153,7 @@ const Cards = () => {
                 </div>
                 <div class="card" onClick={()=>{setActive(true); switchComp("income sources")}}>
                   {" "}
-                  <GrResources /> <span className="cardName">Income Sources</span>{" "}
+                  <GrResources  /> <span className="cardName">Income Sources</span>{" "}
                 </div>
                 <div class="card" onClick={()=>{setActive(true); switchComp("id types")}}>
                   {" "}
@@ -177,7 +180,7 @@ const Cards = () => {
               </div>
             </section>
 
-            <Grid item xs={9} md={8} lg={9}>
+            {PresentComp && <Grid item xs={9} md={8} lg={9}>
               <Paper
                 sx={{
                   p: 1,
@@ -187,9 +190,9 @@ const Cards = () => {
                   // height: 240,
                 }}
               >
-                {PresentComp}
+                {PresentComp }
               </Paper>
-            </Grid>
+            </Grid>}
           </Grid>
         </Container>
       </Box>
