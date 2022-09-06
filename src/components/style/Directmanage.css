@@ -15,9 +15,9 @@
      width: 100%;
     padding-left: 20px;
     position: sticky;
-    top: 0;
+    top: 60px;
 
-    position: -webkit-sticky;
+    /* position: -webkit-sticky; */
 
 
 }
@@ -35,7 +35,7 @@
 }
 .current-directive{
     height:40px;
-    background-color: rgba(86, 86, 86, 0.967);
+    background-color: rgba(164, 161, 161, 0.866);
     border-radius: 5px;
     /* margin: 15px; */
     padding: 10px;

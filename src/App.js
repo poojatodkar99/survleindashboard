@@ -10,6 +10,8 @@ import Cards from "../src/components/Cards";
 import Organize from './components/pages/Organize';
 import Addentry from './components/pages/Addentry';
 import Editentry from './components/pages/Editentry';
+import Fullcalender from './components/pages/Fullcalender';
+import Calenderdate from './components/pages/Calenderdate';
 
 
 
@@ -22,6 +24,8 @@ function App() {
        {/* <Navbar /> */}
       {/* <Routes> */}
       {/* <Editentry/> */}
+      {/* <Fullcalender/> */}
+      {/* <Calenderdate/> */}
          <Dashboard/>
          {/* <Addentry/> */}
          {/* <Organize/> */}

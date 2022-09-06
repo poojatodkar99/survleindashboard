@@ -48,12 +48,22 @@ export const MainListItems = (props) => {
         <ListItemText primary="Reports" />
       </ListItemButton>
       </Link>
+      <Link style={{color:"#282c34",textDecoration:"none"}} to='/roles'>
       <ListItemButton>
         <ListItemIcon>
           <LayersIcon />
         </ListItemIcon>
-        <ListItemText primary="Integrations" />
+        <ListItemText primary="Roles" />
       </ListItemButton>
+      </Link>
+      <Link style={{color:"#282c34",textDecoration:"none"}} to='/calendar'>
+      <ListItemButton>
+        <ListItemIcon>
+          <LayersIcon />
+        </ListItemIcon>
+        <ListItemText primary="Calender" />
+      </ListItemButton>
+      </Link>
     </React.Fragment>
   );
 };

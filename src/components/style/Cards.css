@@ -41,6 +41,8 @@
     /* width: 300px; */
     display: flex;
     flex-direction: column;
+    margin-top: 8pt;
+
   }
   .home-section.active .card_wrapper{
     /* grid-gap: 10px; */

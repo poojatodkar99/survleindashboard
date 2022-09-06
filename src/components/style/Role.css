@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main-container{
+    overflow: hidden;
+}
+
+
+.Role_title{
+    /* height: 140px; */
+    background-color: rgba(97, 180, 10, 0.953);
+     /* background-image:linear-gradient(to right, rgba(27, 245, 56, 0.618),rgb(28, 195, 9) , rgb(21, 188, 132)); */
+     width: 100%;
+    padding-left: 20px;
+    position: sticky;
+    top: 0;
+
+    position: -webkit-sticky;
+
+
+}

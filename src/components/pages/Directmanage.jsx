@@ -275,8 +275,8 @@ const Directmanage = () => {
               ? theme.palette.grey[100]
               : theme.palette.grey[900],
           flexGrow: 1,
-          height: "100vh",
-          overflow: "auto",
+          // height: "100vh",
+          // overflow: "auto",
           marginTop: "60px",
         }}
       >
@@ -446,10 +446,11 @@ const Directmanage = () => {
             </Typography>
             <div className="Inputdiv">
               {" "}
-              <Typography>Role</Typography>
-              <FormControl sx={{ minWidth: 120 }}>
+              <Typography sx={{width:"70px"}}>Role</Typography>
+              <FormControl sx={{ minWidth:"250px"}}>
                 <InputLabel id="demo-simple-select-label">Role</InputLabel>
                 <Select
+                 sx={{width:"250px"}}
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                   value={post}
@@ -463,17 +464,20 @@ const Directmanage = () => {
               </FormControl>
             </div>
             <div className="Inputdiv">
-              <Typography>Directive</Typography>
+              <Typography sx={{width:"70px"}}>Directive</Typography>
               <TextField
+              sx={{width:"250px"}}
                 id="outlined-basic"
                 label="Directive"
                 variant="outlined"
               />
             </div>
             <div className="Inputdiv">
-              <Typography>Due By</Typography>
+              <Typography sx={{width:"70px"}}>Due By</Typography>
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DesktopDatePicker
+                              sx={{width:"250px"}}
+
                   label="Date desktop"
                   inputFormat="MM/DD/YYYY"
                   value={value}
@@ -483,12 +487,13 @@ const Directmanage = () => {
               </LocalizationProvider>
             </div>
             <div className="Inputdiv">
-              <Typography>Filter</Typography>
-              <Auto />
+              <Typography sx={{width:"70px"}}>Filter</Typography>
+              <Auto               sx={{width:"250px"}}
+ />
             </div>
 
             <div className="Inputdiv">
-              <Typography>Code</Typography>
+              <Typography sx={{width:"70px"}}>Code</Typography>
               <Stack direction="row" spacing={2}>
                 {" "}
                 <CustomizeButtonyellow variant="contained" color="success">

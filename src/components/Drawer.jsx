@@ -27,6 +27,9 @@ import Cards from './Cards';
 import Worksheet from './Worksheet';
 import Directive from './pages/Directive';
 import Directmanage from './pages/Directmanage';
+
+import Roletable from './pages/Roletable';
+import Fullcalender from './pages/Fullcalender';
 // import Deposits from './Deposits';
 // import Orders from './Orders';
 
@@ -292,8 +295,8 @@ function DashboardContent() {
            <Route path="/worksheet" element={<Worksheet/>} />
             <Route  path="/directive" element={<Directmanage/>}/>
             
-            {/* <Route path="card" element={<Cards/>} /> */}
-            {/* <Route path="violations" element={<Navbarcard/>} />   */}
+            <Route path="/roles" element={<Roletable/>} />
+            <Route path="/calendar" element={<Fullcalender/>} />  
       
           </Routes>
     
