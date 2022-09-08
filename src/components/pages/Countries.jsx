@@ -15,6 +15,7 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import Modalpopup from "./Modalpopup";
 import Organize from "./Organize";
 import Addentry from "./Addentry";
+import { useNavigate } from "react-router-dom";
 
 // import EnhancedTable from '../../Table';
 
@@ -154,7 +155,9 @@ const Countries = (props) => {
   const handleOpen = () => {
     setOpen(true);
   };
+  const navigate = useNavigate()
   const handleClose = () => setOpen(false);
+
   const [show, setShow] = useState(<></>);
 
   return (
@@ -167,6 +170,7 @@ const Countries = (props) => {
             onClick={() => {
               props.setActive(false);
               props.setPresentComp(null);
+              navigate("/cards")
             }}
           >
             <ArrowBackIcon />

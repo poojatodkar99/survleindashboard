@@ -96,7 +96,6 @@ const Addrole = (props) => {
   return (
     <>
       <Grid item xs={12} md={12} lg={12} sx={{ p: 2, display: "flex" }}>
-        {/* <Grid sx={{display:"flex",justifyContent:"space-between",flexWrap:"wrap"}} item xs={12} md={12} lg={12}> */}
         <div className="leftdiv">
           <Typography>Sigle Entry</Typography>
 
@@ -242,11 +241,24 @@ const Addrole = (props) => {
               spacing={2}
               sx={{ display: "flex", justifyContent: "space-around", m: 2 }}
             >
-              <CustButton>Add</CustButton>
+              <Button style={{
+                  backgroundColor: "rgb(47, 157, 204)",
+                  borderRadius: "15px",
+                  color: "#fff",
+                  maxWidth: "200px",
+                  fontSize: "13px", padding:"7px"
+                  
+                  }} variant="contained" component="label">Add</Button>
 
-              <CustButton variant="contained" component="label">
+              <Button style={{
+                  backgroundColor: "rgb(47, 157, 204)",
+                  borderRadius: "15px",
+                  color: "#fff",
+                  maxWidth: "200px",
+                  fontSize: "13px",padding:"7px"
+                  }} variant="contained" component="label">
                 Clear
-              </CustButton>
+              </Button>
             </Stack>
           </Paper>
         </div>
@@ -274,21 +286,42 @@ const Addrole = (props) => {
 
             <Stack direction="row" spacing={2}>
               {" "}
-              <CustButton onClick={() => setOpen(true)}>Browse File</CustButton>
-              <CustButton style={{}} variant="contained" component="label">
+              <Button color="primary"
+                style={{
+                  backgroundColor: "rgb(47, 157, 204)",
+                  borderRadius: "15px",
+                  color: "#fff",
+                  maxWidth: "200px",
+                  fontSize: "13px",padding:"7px"
+                  }}
+                  variant="contained" component="label"
+                onClick={() => setOpen(true)}
+              >
+                Browse File
+              </Button>
+              <Button
+               style={{
+                backgroundColor: "rgb(47, 157, 204)",
+                borderRadius: "15px",
+                color: "#fff",
+                maxWidth: "200px",
+                fontSize: "13px",padding:"7px"
+                }}
+                variant="contained" component="label"
+              >
                 Upload
-              </CustButton>
+              </Button>
             </Stack>
 
-            {/* <div style={{marginTop:"60px",maxWidth:"800px" }}>
-            <DropzoneArea  onChange={(files) => console.log("Files:", files)} />
-            </div> */}
+            <div style={{ marginTop: "60px", maxWidth: "800px" }}>
+              <DropzoneArea
+                onChange={(files) => console.log("Files:", files)}
+              />
+            </div>
           </Paper>
         </div>
 
-        {/* </Grid> */}
       </Grid>
-      
     </>
   );
 };

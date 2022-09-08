@@ -24,14 +24,19 @@ import "../components/style/Cards.css";
 import { Box, Container, Grid, Paper } from "@mui/material";
 import EnhancedTable from "./Table";
 import Countries from "./pages/Countries";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 const Cards = () => {
   const [active,setActive] = useState(false)
   const [PresentComp,setPresentComp] = useState(null)
+  const navigate = useNavigate()
+  const {cardname} = useParams()
 
-  const switchComp = (item)=>{
-    
-    switch(item){
+  const switchComp = ()=>{
+    if(cardname){ 
+      setActive(true)
+      switch(cardname){
       case 'countries':{
       setPresentComp(<Countries setPresentComp={setPresentComp} setActive={setActive}/>)
       break;
@@ -87,10 +92,16 @@ const Cards = () => {
       case 'customers':{
         setPresentComp()
         break;
-      }    
-    }
+      }  
+      default:{
+        setPresentComp(<h1>Not Found</h1>)
+
+      }  
+    }}
     
   }
+
+  useEffect(switchComp,[cardname])
   return (
     <>
       <Box
@@ -115,65 +126,65 @@ const Cards = () => {
 
             <section className={active?"home-section active":"home-section"}>
               <div class="card_wrapper wrapper-1">
-                <div class="card" onClick={()=>{setActive(true); switchComp("countries")}}>
+                <div class="card" onClick={()=>{setActive(true); navigate("/cards/countries")}}>
                   <BsGlobe2 /> <span className="cardName">Countries</span>{" "}
                 </div>
-                <div class="card" onClick={()=>{setActive(true); switchComp("currencies")}}>
+                <div class="card" onClick={()=>{setActive(true); navigate("/cards/currencies")}}>
                   {" "}
                   <AiOutlineDollarCircle /> <span className="cardName">Currencies</span>{" "}
                 </div>
 
-                <div class="card" onClick={()=>{setActive(true); switchComp("exchange branches")}}>
+                <div class="card" onClick={()=>{setActive(true); navigate("/cards/exchange branches")}}>
                   {" "}
                   <BsArrowLeftRight /> <span className="cardName">Exchange Branches</span>{" "}
                 </div>
-                <div class="card" onClick={()=>{setActive(true); switchComp("agent")}}>
+                <div class="card" onClick={()=>{setActive(true); navigate("/cards/agent")}}>
                   {" "}
                   <CgProfile /> <span className="cardName">Agent</span>{" "}
                 </div>
               </div>
               <div class="card_wrapper wrapper-2">
-                <div id="RowSecond" class="card" onClick={()=>{setActive(true); switchComp("transaction types")}}>
+                <div id="RowSecond" class="card" onClick={()=>{setActive(true); navigate("/cards/transaction types")}}>
                   {" "}
                   <AiOutlineTransaction /> <span className="cardName">Transaction Types</span>{" "}
                 </div>
-                <div id="RowSecond" class="card" onClick={()=>{setActive(true); switchComp("service types")}}>
+                <div id="RowSecond" class="card" onClick={()=>{setActive(true); navigate("/cards/service types")}}>
                   {" "}
                   <AiFillSetting /> <span className="cardName">Service Type</span>{" "}
                 </div>
-                <div id="RowSecond" class="card" onClick={()=>{setActive(true); switchComp("payment modes")}}>
+                <div id="RowSecond" class="card" onClick={()=>{setActive(true); navigate("/cards/payment modes")}}>
                   {" "}
                   <MdPayments /> <span className="cardName">Payment Modes</span>{" "}
                 </div>
               </div>
               <div class="card_wrapper wrapper-3">
-                <div class="card" onClick={()=>{setActive(true); switchComp("suspicious words")}}>
+                <div class="card" onClick={()=>{setActive(true); navigate("/cards/suspicious words")}}>
                   {" "}
                   <BsSearch /> <span className="cardName">Suspicious words</span>{" "}
                 </div>
-                <div class="card" onClick={()=>{setActive(true); switchComp("income sources")}}>
+                <div class="card" onClick={()=>{setActive(true); navigate("/cards/income sources")}}>
                   {" "}
                   <GrResources  /> <span className="cardName">Income Sources</span>{" "}
                 </div>
-                <div class="card" onClick={()=>{setActive(true); switchComp("id types")}}>
+                <div class="card" onClick={()=>{setActive(true); navigate("/cards/id types")}}>
                   {" "}
                   <ImProfile /> <span className="cardName">ID Types</span>{" "}
                 </div>
               </div>
               <div class="card_wrapper wrapper-4">
-                <div class="card" onClick={()=>{setActive(true); switchComp("professions")}}>
+                <div class="card" onClick={()=>{setActive(true); navigate("/cards/professions")}}>
                   {" "}
                   <MdShoppingBag /> <span className="cardName">Professions</span>{" "}
                 </div>
-                <div class="card" onClick={()=>{setActive(true); switchComp("beneficiary")}}>
+                <div class="card" onClick={()=>{setActive(true); navigate("/cards/beneficiary")}}>
                   {" "}
                   <BsFillPeopleFill /> <span className="cardName">Beneficiary</span>{" "}
                 </div>
-                <div class="card" onClick={()=>{setActive(true); switchComp("customer types")}}>
+                <div class="card" onClick={()=>{setActive(true); navigate("/cards/customer types")}}>
                   {" "}
                   <RiShieldUserFill /> <span className="cardName">Customer Types</span>{" "}
                 </div>
-                <div class="card" onClick={()=>{setActive(true); switchComp("customers")}}>
+                <div class="card" onClick={()=>{setActive(true); navigate("/cards/customers")}}>
                   {" "}
                   <FcBusinessman /> <span className="cardName">Customers</span>{" "}
                 </div>

@@ -12,12 +12,16 @@ import Addentry from './components/pages/Addentry';
 import Editentry from './components/pages/Editentry';
 import Fullcalender from './components/pages/Fullcalender';
 import Calenderdate from './components/pages/Calenderdate';
+import 'react-dropzone-uploader/dist/styles.css'
+
 
 
 
 function App() {
   return (
     <>
+
+
      <Router>
       {/* <Dashboard /> */}
       {/* <Cards/> */}

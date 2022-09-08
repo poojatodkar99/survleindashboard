@@ -26,7 +26,7 @@ import Cards from './Cards';
 import Worksheet from './Worksheet';
 import Directive from './pages/Directive';
 import Directmanage from './pages/Directmanage';
-
+import Dropzone from 'react-dropzone-uploader'
 import Roletable from './pages/Roletable';
 import Fullcalender from './pages/Fullcalender';
 import { Stack } from '@mui/system';
@@ -36,6 +36,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 
 import SettingsIcon from '@mui/icons-material/Settings';
+import User from './pages/user/User';
 
 
 
@@ -315,18 +316,21 @@ function DashboardContent() {
 >
         {/* {<Show />} */}
         {/* {component} */}
-        {
-          
+        {<>
           <Routes>
              <Route exact path="/" element={component } />
              <Route exact path="/cards" element={<Cards />} />
+             <Route exact path="/cards/:cardname" element={<Cards />} />
            <Route path="/worksheet" element={<Worksheet/>} />
             <Route  path="/directive" element={<Directmanage/>}/>
             
             <Route path="/roles" element={<Roletable/>} />
             <Route path="/calendar" element={<Fullcalender/>} />  
-      
+            <Route path="/user" element={<User/>} />  
+
           </Routes>
+          
+          </>
     
          
     
