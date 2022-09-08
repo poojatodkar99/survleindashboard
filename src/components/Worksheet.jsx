@@ -121,7 +121,7 @@ const Worksheet = () => {
 
   return (
     <>
-      {/* <Box
+      <Box
         component="main"
         sx={{
           backgroundColor: (theme) =>
@@ -129,12 +129,12 @@ const Worksheet = () => {
               ? theme.palette.grey[100]
               : theme.palette.grey[900],
           flexGrow: 1,
-          height: "100vh",
+          // height: "100vh",
           overflow: "auto",
           marginTop: "60px",
         }}
-      > */}
-        <Container maxWidth="lg" sx={{ mt: 10, mb: 4 }}>
+      >
+        {/* <Container maxWidth="lg" sx={{ mt: 10, mb: 4 }}> */}
           <Grid container spacing={3} >
             {/* Chart */}
             <Grid item xs={12} md={8} lg={8}>
@@ -333,8 +333,8 @@ const Worksheet = () => {
             </Grid>
             {/* Recent Orders */}
           </Grid>
-        </Container>
-      {/* </Box> */}
+        {/* </Container> */}
+      </Box>
     </>
   );
 };

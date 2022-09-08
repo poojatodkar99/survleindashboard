@@ -16,7 +16,6 @@ import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import NotificationsIcon from '@mui/icons-material/Notifications';
 import { MainListItems, SecondaryListItems } from './ListItems';
 import Chart from './Chart';
 import Scatterchart from './Scatterchart';
@@ -30,6 +29,16 @@ import Directmanage from './pages/Directmanage';
 
 import Roletable from './pages/Roletable';
 import Fullcalender from './pages/Fullcalender';
+import { Stack } from '@mui/system';
+import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService';
+import RuleIcon from '@mui/icons-material/Rule';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+
+import SettingsIcon from '@mui/icons-material/Settings';
+
+
+
 // import Deposits from './Deposits';
 // import Orders from './Orders';
 
@@ -46,7 +55,7 @@ function Copyright(props) {
   );
 }
 
-const drawerWidth = 240;
+const drawerWidth = 180;
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
@@ -103,10 +112,10 @@ function DashboardContent() {
   };
   const component = <>
   <Toolbar />
-  <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-    <Grid container spacing={3}>
+  {/* <Container maxWidth="lg" sx={{ mt: 1, mb: 2 }}> */}
+    <Grid container  spacing={3}>
       {/* Chart */}
-      <Grid item xs={12} md={8} lg={8}>
+      <Grid item xs={12} md={7} lg={7}>
         <Paper
           sx={{
             p: 2,
@@ -122,7 +131,7 @@ function DashboardContent() {
         </Paper>
       </Grid>
       {/* Recent Deposits */}
-      <Grid item xs={12} md={4} lg={4}>
+      <Grid item xs={12} md={5} lg={5}>
         <Paper
           sx={{
             p: 2,
@@ -143,7 +152,7 @@ function DashboardContent() {
       </Grid>
     </Grid>
     <Copyright sx={{ pt: 4 }} />
-  </Container>
+  {/* </Container> */}
 </>
  
  // const paths = ['dashboard', 'orders', 'customers', 'reports', 'integrations']
@@ -245,11 +254,30 @@ function DashboardContent() {
             >
               Dashboard
             </Typography>
+            <Stack direction="row" spacing={2}>
+
             <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <NotificationsIcon />
-              </Badge>
+                <HomeRepairServiceIcon />
+          
             </IconButton>
+            <IconButton color="inherit">
+            <Badge badgeContent={4} color="secondary">
+
+                <NotificationsActiveIcon />
+                </Badge>
+
+            </IconButton>
+            <IconButton color="inherit">
+                <RuleIcon />
+            </IconButton>
+            <IconButton color="inherit">
+
+                <SettingsIcon />
+            </IconButton>
+            <IconButton color="inherit">
+                <AccountCircleIcon />
+            </IconButton>
+            </Stack>
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>
@@ -267,9 +295,9 @@ function DashboardContent() {
           </Toolbar>
           <Divider />
           <List component="nav">
-            <MainListItems />
+            <MainListItems  />
             <Divider sx={{ my: 1 }} />
-            <SecondaryListItems />
+            {/* <SecondaryListItems /> */}
           </List>
         </Drawer>
         <Box

@@ -22,14 +22,14 @@ import FormControl from "@mui/material/FormControl";
 import { useState } from "react";
 import { DropzoneDialog } from "material-ui-dropzone";
 import { Stack } from "@mui/system";
+import { DropzoneArea } from "material-ui-dropzone";
 
 const CustButton = styled(Button)(({}) => ({
   backgroundColor: "rgb(47, 157, 204)",
   borderRadius: "15px",
   color: "#fff",
   maxWidth: "200px",
-  fontSize:"13px",
-
+  fontSize: "13px",
 
   "&:hover": {
     backgroundColor: alpha("rgb(47, 157, 204)", 0.25),
@@ -54,10 +54,9 @@ const Addrole = (props) => {
 
   const [selectedValue3, setSelectedValue3] = React.useState("d");
 
-
   const handleChangeradio = (event) => {
     // const abc = selectedValue;
-    setSelectedValue(event.target.value,);
+    setSelectedValue(event.target.value);
   };
   const handleChangeradio1 = (event) => {
     setSelectedValue1(event.target.value);
@@ -68,7 +67,6 @@ const Addrole = (props) => {
   const handleChangeradio3 = (event) => {
     setSelectedValue3(event.target.value);
   };
-
 
   const controlProps = (item) => ({
     checked: selectedValue === item,
@@ -97,181 +95,200 @@ const Addrole = (props) => {
 
   return (
     <>
-
-      <Grid item xs={12} md={12} lg={12} sx={{ p: 2 ,display:"flex",}}>
-      
+      <Grid item xs={12} md={12} lg={12} sx={{ p: 2, display: "flex" }}>
         {/* <Grid sx={{display:"flex",justifyContent:"space-between",flexWrap:"wrap"}} item xs={12} md={12} lg={12}> */}
         <div className="leftdiv">
-        <Typography>Sigle Entry</Typography>
+          <Typography>Sigle Entry</Typography>
 
-        <Paper
-          sx={{
-            margin: "10px",
-            p: 2,
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          <Table>
-            <TableBody>
-              <TableRow>
-                <TableCell>Roles </TableCell>
-                <TableCell>
-                  <TextField
-                    id="outlined-basic"
-                    label="Role name"
-                    variant="outlined"
-                  />
-                </TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>Previleges</TableCell>
-                <TableCell>
-                  <ul>
-                    <li>
-                      User Module
-                      
-                      <Radio    size="small" {...controlProps("a")} color="success" />
-                      <Radio    size="small"
-                        {...controlProps("b")}
-                        sx={{
-                          color: "#C21010",
-                          "&.Mui-checked": {
-                            color: "#C21010",
-                          },
-                        }}
-                      />
-                    </li>{" "}
-                    <li>
-                      Master Module{" "}
-                      <Radio      size="small"{...controlProps1("c")} color="success" />
-                      <Radio
-                        {...controlProps1("d")}
-                        sx={{
-                          color: "#C21010",
-                          "&.Mui-checked": {
-                            color: "#C21010",
-                          },
-                        }}
-                        size="small"
-                      />
-                    </li>{" "}
-                    <li>
-                      Risk Module{" "}
-                      <Radio     size="small" {...controlProps2("e")} color="success" />
-                      <Radio
-                          size="small"
-                        {...controlProps2("f")}
-                        sx={{
-                          color: "#C21010",
-                          "&.Mui-checked": {
-                            color: "#C21010",
-                          },
-                        }}
-                      />
-                    </li>
-                    <li>
-                      Transactions Module{" "}
-                      
-                      <Radio    size="small"
-                       {...controlProps3("g")}
-                       color="success" />
-                      <Radio    size="small"
-                        {...controlProps3("h")}
-                        sx={{
-                          color: "#C21010",
-                          "&.Mui-checked": {
-                            color: "#C21010",
-                          },
-                        }}
-                      />
-                    </li>
-                  </ul>
-                </TableCell>
-              </TableRow>
-              
-              <TableRow>
-                <TableCell>Status</TableCell>
-                <TableCell>
-               
-
-                  <FormControl>
-                    <RadioGroup
-                      aria-labelledby="demo-radio-buttons-group-label"
-                      defaultValue="female"
-                      name="radio-buttons-group"
-                    >
-                      <FormControlLabel
-                        value="female"
-                        color="success"
-                        control={ <Radio     size="small" color="success" />}
-                        label="Enable"
-                      />
-                      <FormControlLabel
-                        value="male"
-                        control={<Radio    size="small"
-                            // {...controlProps("j")}
-                            sx={{
-                              color: "#C21010",
-                              "&.Mui-checked": {
-                                color: "#C21010",
-                              },
-                            }}
-                          />}
-                        label="Disable"
-                      />
-                    </RadioGroup>
-                  </FormControl>
-                </TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-          <Stack direction="row" spacing={2} sx={{display:"flex",justifyContent:"space-around",m:2}}>
-             <CustButton>Add</CustButton>
-
-
-<CustButton variant="contained" component="label">
-  Clear
-</CustButton>
-</Stack>
-        </Paper>
-        </div>
-    <div className="middlediv"></div>
-        
-       
-        <div className="rightdiv">
-        <Typography sx={{ p: 1 }}>Bulk Entry</Typography>
-        <Paper sx={{p:3}}>
-
-          <DropzoneDialog
-            acceptedFiles={["image/*", "video/*"]}
-            // acceptedFiles={["image/*"]}
-            cancelButtonText={"cancel"}
-            submitButtonText={"submit"}
-            maxFileSize={500000}
-            open={open}
-            onClose={() => setOpen(false)}
-            onSave={(files) => {
-              console.log("Files:", files);
-              setFiles(files);
-              setOpen(false);
+          <Paper
+            sx={{
+              margin: "10px",
+              p: 2,
+              display: "flex",
+              flexDirection: "column",
             }}
-            showPreviews={true}
-            showFileNamesInPreview={true}
-          />
-                    <Stack direction="row" spacing={2}> <CustButton onClick={() => setOpen(true)}>Browse File</CustButton>
+          >
+            <Table>
+              <TableBody>
+                <TableRow>
+                  <TableCell>Roles </TableCell>
+                  <TableCell>
+                    <TextField
+                      id="outlined-basic"
+                      label="Role name"
+                      variant="outlined"
+                    />
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Previleges</TableCell>
+                  <TableCell>
+                    <ul>
+                      <li>
+                        User Module
+                        <Radio
+                          size="small"
+                          {...controlProps("a")}
+                          color="success"
+                        />
+                        <Radio
+                          size="small"
+                          {...controlProps("b")}
+                          sx={{
+                            color: "#C21010",
+                            "&.Mui-checked": {
+                              color: "#C21010",
+                            },
+                          }}
+                        />
+                      </li>{" "}
+                      <li>
+                        Master Module{" "}
+                        <Radio
+                          size="small"
+                          {...controlProps1("c")}
+                          color="success"
+                        />
+                        <Radio
+                          {...controlProps1("d")}
+                          sx={{
+                            color: "#C21010",
+                            "&.Mui-checked": {
+                              color: "#C21010",
+                            },
+                          }}
+                          size="small"
+                        />
+                      </li>{" "}
+                      <li>
+                        Risk Module{" "}
+                        <Radio
+                          size="small"
+                          {...controlProps2("e")}
+                          color="success"
+                        />
+                        <Radio
+                          size="small"
+                          {...controlProps2("f")}
+                          sx={{
+                            color: "#C21010",
+                            "&.Mui-checked": {
+                              color: "#C21010",
+                            },
+                          }}
+                        />
+                      </li>
+                      <li>
+                        Transactions Module{" "}
+                        <Radio
+                          size="small"
+                          {...controlProps3("g")}
+                          color="success"
+                        />
+                        <Radio
+                          size="small"
+                          {...controlProps3("h")}
+                          sx={{
+                            color: "#C21010",
+                            "&.Mui-checked": {
+                              color: "#C21010",
+                            },
+                          }}
+                        />
+                      </li>
+                    </ul>
+                  </TableCell>
+                </TableRow>
 
+                <TableRow>
+                  <TableCell>Status</TableCell>
+                  <TableCell>
+                    <FormControl>
+                      <RadioGroup
+                        aria-labelledby="demo-radio-buttons-group-label"
+                        defaultValue="female"
+                        name="radio-buttons-group"
+                      >
+                        <FormControlLabel
+                          value="female"
+                          color="success"
+                          control={<Radio size="small" color="success" />}
+                          label="Enable"
+                        />
+                        <FormControlLabel
+                          value="male"
+                          control={
+                            <Radio
+                              size="small"
+                              // {...controlProps("j")}
+                              sx={{
+                                color: "#C21010",
+                                "&.Mui-checked": {
+                                  color: "#C21010",
+                                },
+                              }}
+                            />
+                          }
+                          label="Disable"
+                        />
+                      </RadioGroup>
+                    </FormControl>
+                  </TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+            <Stack
+              direction="row"
+              spacing={2}
+              sx={{ display: "flex", justifyContent: "space-around", m: 2 }}
+            >
+              <CustButton>Add</CustButton>
 
-          <CustButton style={{}} variant="contained" component="label">
-            Upload
-          </CustButton>
-          </Stack>
+              <CustButton variant="contained" component="label">
+                Clear
+              </CustButton>
+            </Stack>
           </Paper>
         </div>
-       
-      {/* </Grid> */}
+        <div className="middlediv"></div>
 
+        <div className="rightdiv">
+          <Typography sx={{ p: 1 }}>Bulk Entry</Typography>
+          <Paper sx={{ p: 3 }}>
+            <DropzoneDialog
+              acceptedFiles={["image/*", "video/*"]}
+              // acceptedFiles={["image/*"]}
+              cancelButtonText={"cancel"}
+              submitButtonText={"submit"}
+              maxFileSize={500000}
+              open={open}
+              onClose={() => setOpen(false)}
+              onSave={(files) => {
+                console.log("Files:", files);
+                setFiles(files);
+                setOpen(false);
+              }}
+              showPreviews={true}
+              showFileNamesInPreview={true}
+            />
+
+            <Stack direction="row" spacing={2}>
+              {" "}
+              <CustButton onClick={() => setOpen(true)}>Browse File</CustButton>
+              <CustButton style={{}} variant="contained" component="label">
+                Upload
+              </CustButton>
+            </Stack>
+
+            {/* <div style={{marginTop:"60px",maxWidth:"800px" }}>
+            <DropzoneArea  onChange={(files) => console.log("Files:", files)} />
+            </div> */}
+          </Paper>
+        </div>
+
+        {/* </Grid> */}
       </Grid>
+      
     </>
   );
 };

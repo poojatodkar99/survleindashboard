@@ -4,9 +4,11 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import ListSubheader from "@mui/material/ListSubheader";
 import DashboardIcon from "@mui/icons-material/Dashboard";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import PeopleIcon from "@mui/icons-material/People";
+import SchoolIcon from '@mui/icons-material/School';
+import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
+import GroupsIcon from '@mui/icons-material/Groups';
 import BarChartIcon from "@mui/icons-material/BarChart";
+import BalanceIcon from '@mui/icons-material/Balance';
 import LayersIcon from "@mui/icons-material/Layers";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import {Link, Navigate} from "react-router-dom";
@@ -14,56 +16,57 @@ import {Link, Navigate} from "react-router-dom";
 export const MainListItems = (props) => {
   return (
     <React.Fragment>
-      <Link style={{color:"#282c34",textDecoration:"none"}} to='/'>
-        <ListItemButton >
+    
+      <Link style={{textDecoration:"none"}} to='/'>
+        <ListItemButton  >
           <ListItemIcon>
-            <DashboardIcon />
+            <DashboardIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText primary="Dashboard" />
+          <ListItemText secondary="Dashboard" />
         </ListItemButton>
       </Link>
 
-      <Link style={{color:"#282c34",textDecoration:"none"}} to='/cards'>
+      <Link style={{textDecoration:"none"}} to='/cards'>
       <ListItemButton onClick={()=>props.show('orders')}>
         <ListItemIcon>
-          <ShoppingCartIcon />
+          <SchoolIcon ontSize="small"  />
         </ListItemIcon>
-        <ListItemText primary="Cards" />
+        <ListItemText secondary="Master" />
       </ListItemButton>
       </Link>
-      <Link style={{color:"#282c34",textDecoration:"none"}} to='/worksheet'>
+      <Link style={{textDecoration:"none"}} to='/worksheet'>
       <ListItemButton onClick={()=>props.show('Worksheet')}>
         <ListItemIcon>
-          <PeopleIcon />
+          <CurrencyExchangeIcon ontSize="small"  />
         </ListItemIcon>
-        <ListItemText primary="Worksheet" />
+        <ListItemText secondary="Transaction" />
       </ListItemButton>
       </Link>
-      <Link style={{color:"#282c34",textDecoration:"none"}} to='/directive'>
+      <Link style={{textDecoration:"none"}} to='/directive'>
       <ListItemButton onClick={()=>props.show('reports')}>
-        <ListItemIcon>
-          <BarChartIcon />
+        <ListItemIcon  >
+          <BalanceIcon ontSize="small"   />
         </ListItemIcon>
 
-        <ListItemText primary="Reports" />
+        <ListItemText secondary="violations" />
       </ListItemButton>
       </Link>
-      <Link style={{color:"#282c34",textDecoration:"none"}} to='/roles'>
+      <Link style={{textDecoration:"none"}} to='/roles'>
+      <ListItemButton>
+        <ListItemIcon>
+          <GroupsIcon ontSize="small"  />
+        </ListItemIcon>
+        <ListItemText secondary="Management" />
+      </ListItemButton>
+      </Link>
+      {/* <Link style={{textDecoration:"none"}} to='/calendar'>
       <ListItemButton>
         <ListItemIcon>
           <LayersIcon />
         </ListItemIcon>
-        <ListItemText primary="Roles" />
+        <ListItemText secondary="Calender" />
       </ListItemButton>
-      </Link>
-      <Link style={{color:"#282c34",textDecoration:"none"}} to='/calendar'>
-      <ListItemButton>
-        <ListItemIcon>
-          <LayersIcon />
-        </ListItemIcon>
-        <ListItemText primary="Calender" />
-      </ListItemButton>
-      </Link>
+      </Link> */}
     </React.Fragment>
   );
 };

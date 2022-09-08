@@ -11,10 +11,11 @@ const Chart = () => {
         series: [44, 55, 67],
         options: {
           chart: {
-            height: 350,
+            // height: 350,
             type: 'radialBar',
           },
           plotOptions: {
+            
             radialBar: {
               dataLabels: {
                 name: {
@@ -34,7 +35,10 @@ const Chart = () => {
               }
             }
           },
-          labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],
+          labels: ['Handled', 'Pending', 'Alert'],
+          colors: ['#FFB200', '#3EC70B',"#ff1a1a"],
+
+        
         },
       
       

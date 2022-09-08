@@ -109,7 +109,7 @@ const Cards = () => {
           
         }}
       >
-        <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+        {/* <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}> */}
           <Grid container >
             {/* Chart */}
 
@@ -194,7 +194,7 @@ const Cards = () => {
               </Paper>
             </Grid>}
           </Grid>
-        </Container>
+        {/* </Container> */}
       </Box>
     </>
   );
