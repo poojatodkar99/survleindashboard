@@ -30,6 +30,7 @@ import Rules2 from "./components/pages-2/Rules2";
 import Rules3 from "./components/pages-2/Rules3";
 import Settings from "./components/pages-2/Settings";
 import Settingsamit from "./components/pages-2/Settingsamit";
+import Notifications from "./components/pages-2/Notifications";
 
 function App() {
   return (
@@ -50,9 +51,10 @@ function App() {
         {/* <Rules2/> */}
         {/* <Rules3 /> */}
         {/* <Settings/> */}
-        <Settingsamit/>
+        {/* <Settingsamit/> */}
+        {/* <Notifications /> */}
 
-        {/* <Dashboard /> */}
+        <Dashboard />
         {/* <Cards/> */}
         {/* <Navbar /> */}
         {/* <Routes> */}
