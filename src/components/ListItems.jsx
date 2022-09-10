@@ -39,10 +39,12 @@ export const MainListItems = (props) => {
         <ListItemIcon>
           <CurrencyExchangeIcon ontSize="small"  />
         </ListItemIcon>
+        <Link to='/user-transaction'>
         <ListItemText secondary="Transaction" />
+        </Link>
       </ListItemButton>
       </Link>
-      <Link style={{textDecoration:"none"}} to='/directive'>
+      <Link style={{textDecoration:"none"}} to='/user-voilation'>
       <ListItemButton onClick={()=>props.show('reports')}>
         <ListItemIcon  >
           <BalanceIcon ontSize="small"   />

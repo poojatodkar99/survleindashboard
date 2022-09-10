@@ -40,6 +40,8 @@ import User from "./pages/user/User";
 import Settingsamit from "./pages-2/Settingsamit";
 import Settings from "./pages-2/Settings";
 import Notifications from "./pages-2/Notifications";
+import Transactions from "./pages-2/Transactions";
+import Voilations from "./pages-2/Voilations";
 
 // import Deposits from './Deposits';
 // import Orders from './Orders';
@@ -339,6 +341,10 @@ function DashboardContent() {
                     element={<Settingsamit />}
                   />
                   <Route exact path="/user-setting" element={<Settings />} />
+                  <Route exact path="/user-transaction" element={<Transactions />} />
+                  <Route exact path="/user-voilation" element={<Voilations />} />
+
+
 
                   <Route path="/worksheet" element={<Worksheet />} />
                   <Route path="/directive" element={<Directmanage />} />

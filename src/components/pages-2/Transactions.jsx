@@ -1,7 +1,7 @@
 import React from "react";
 import "../style-2/transaction.css";
 import Container from "@mui/material/Container";
-import { Grid, IconButton } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import NotificationsActiveOutlinedIcon from "@mui/icons-material/NotificationsActiveOutlined";
 import ListAltOutlinedIcon from "@mui/icons-material/ListAltOutlined";
@@ -274,7 +274,7 @@ function Transactions() {
 
   return (
     <div>
-      <Container>
+      {/* <Container>
         <Grid
           d
           sx={{
@@ -283,9 +283,21 @@ function Transactions() {
             width: "100%",
             margin: "none",
           }}
-        >
+        > */}
+         <Box
+    component="main"
+    sx={{
+      backgroundColor: (theme) =>
+        theme.palette.mode === "light"
+          ? theme.palette.grey[100]
+          : theme.palette.grey[900],
+      flexGrow: 1,
+      // height: "100vh",
+      // overflow: "auto",
+      marginTop: "60px",
+    }}>
           {" "}
-          <div className="transactionnav ">
+          {/* <div className="transactionnav ">
             <span>
               <CalendarTodayOutlinedIcon />
             </span>
@@ -301,7 +313,7 @@ function Transactions() {
             <span>
               <AccountCircleIcon />
             </span>
-          </div>
+          </div> */}
           <div className="TransactionTop">
             <h4>Transactions</h4>
             <span>
@@ -375,8 +387,9 @@ function Transactions() {
             </div>
             <div>{open.sec ? <DenseTable /> : ""}</div>
           </div>
-        </Grid>
-      </Container>
+        {/* </Grid> */}
+      {/* </Container> */}
+      </Box>
     </div>
   );
 }
