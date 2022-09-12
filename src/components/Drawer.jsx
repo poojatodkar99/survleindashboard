@@ -112,8 +112,6 @@ const mdTheme = createTheme();
 function DashboardContent() {
   const [shownotif, setShownotif] = useState(false);
 
-  
-
   const [open, setOpen] = React.useState(true);
   // const [component, setComponent] = React.useState(true);
 
@@ -269,12 +267,16 @@ function DashboardContent() {
                 Dashboard
               </Typography>
               <Stack direction="row" spacing={2}>
-                <IconButton color="inherit">
-                  <HomeRepairServiceIcon />
-                </IconButton>
+                <Link to={"/user-calendar"}>
+                  <IconButton color="inherit">
+                    <HomeRepairServiceIcon />
+                  </IconButton>
+                </Link>
                 <IconButton color="inherit">
                   <Badge badgeContent={4} color="secondary">
-                    <NotificationsActiveIcon onClick={(e)=>setShownotif(!shownotif)} />
+                    <NotificationsActiveIcon
+                      onClick={(e) => setShownotif(!shownotif)}
+                    />
                     {/* {shownotif && <Notifications />} */}
                   </Badge>
                 </IconButton>
@@ -341,16 +343,22 @@ function DashboardContent() {
                     element={<Settingsamit />}
                   />
                   <Route exact path="/user-setting" element={<Settings />} />
-                  <Route exact path="/user-transaction" element={<Transactions />} />
-                  <Route exact path="/user-voilation" element={<Voilations />} />
-
-
+                  <Route
+                    exact
+                    path="/user-transaction"
+                    element={<Transactions />}
+                  />
+                  <Route
+                    exact
+                    path="/user-voilation"
+                    element={<Voilations />}
+                  />
 
                   <Route path="/worksheet" element={<Worksheet />} />
                   <Route path="/directive" element={<Directmanage />} />
 
                   <Route path="/roles" element={<Roletable />} />
-                  <Route path="/calendar" element={<Fullcalender />} />
+                  <Route path="/user-calendar" element={<Fullcalender />} />
                   <Route path="/user" element={<User />} />
                 </Routes>
               </>
