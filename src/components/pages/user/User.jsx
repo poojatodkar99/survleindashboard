@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from "@mui/material/Container";
-import { Box,Grid } from "@mui/material";
+import { Box,Button,Grid, IconButton, Typography } from "@mui/material";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import NotificationsActiveOutlinedIcon from "@mui/icons-material/NotificationsActiveOutlined";
 import ListAltOutlinedIcon from "@mui/icons-material/ListAltOutlined";
@@ -22,6 +22,13 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { purple } from '@mui/material/colors';
+import ControlPointIcon from '@mui/icons-material/ControlPoint';
+
+
+
+
+
 
 function createData(
   username,
@@ -93,6 +100,19 @@ const Search = styled("div")(({ theme }) => ({
       },
     },
   }));
+  const CustomizeButton = styled(Button)(({ theme }) => ({
+    // color: theme.palette.getContrastText(purple[500]),
+    color:"#fff",
+    backgroundColor: "rgb(47, 157, 204)",
+    // margin: "10px 0",
+    borderRadius: "15px",
+    fontSize:"12px",
+  
+    "&:hover": {
+      backgroundColor: alpha("rgb(47, 157, 204)", 0.25),
+      color: "rgb(47, 157, 204)",
+    },
+  }));
   
 
 function User() {
@@ -107,50 +127,45 @@ function User() {
       flexGrow: 1,
       // height: "100vh",
       // overflow: "auto",
-      marginTop: "60px",
+      marginTop: "65px",
     }}
   >        
       {/* <Container> */}
         <Grid
           sx={{
-            bgcolor: "#cfe8fc",
+            // bgcolor: "#cfe8fc",
             height: "60vh",
             width: "100%",
             margin: "none",
           }}
         >
-          <div className="topnav">
-            <span>
-              <CalendarTodayOutlinedIcon />
-            </span>
-            <span>
-              <NotificationsActiveOutlinedIcon />
-            </span>
-            <span>
-              <ListAltOutlinedIcon />
-            </span>
-            <span>
-              <SettingsOutlinedIcon />
-            </span>
-            <span>
-              <AccountCircleIcon />
-            </span>
+         
+          <div style={{padding:"10px",backgroundColor:"#1976d288"}}>
+            <Typography variant='h5' >Management</Typography>
           </div>
-          <div className="managment">
-            <h4>Management</h4>
-          </div>
-          <div className="UserTop">
-            <h2>
+      
+          <div style={{padding:"10px",backgroundColor:"#B24BF3", display:"flex",justifyContent:"space-between"}}>
+            <div>
+          <IconButton>
+              <KeyboardBackspaceSharpIcon fontSize={'large'} />
+
+              </IconButton>
+            <Typography   sx={{fontFamily:"fantasy",fontSize:"40px"}}>
               {" "}
-              <KeyboardBackspaceSharpIcon />
+              
               Users
-            </h2>
-            <span>
+            </Typography>
+            </div>
+            <span style={{fontSize:"30px",fontFamily:"fantas"}}>
               <h4>00</h4>
               <h5>Directives</h5>
             </span>
+            
           </div>
-          <div className="managementbox11">
+         
+      
+
+          <div style={{display:"flex",justifyContent:"space-between",margin:"40px",}}>
             <Search>
               <SearchIconWrapper>
                 <SearchIcon />
@@ -160,7 +175,9 @@ function User() {
                 inputProps={{ "aria-label": "search" }}
               />
             </Search>{" "}
-            <span>Add Users <h4 style={{border:"1px solid black",borderRadius:'20px',width:'25px'}}><AddIcon/></h4></span>
+           <div>
+           <CustomizeButton  endIcon={<ControlPointIcon />}>Add Users </CustomizeButton>
+           </div>
           </div>
          <div>
          <TableContainer component={Paper}>
@@ -205,15 +222,7 @@ function User() {
               </TableCell>
               <TableCell align="right">{row.risk}</TableCell>
               <TableCell align="right">
-                <button
-                  style={{
-                    borderRadius: "10px",
-                    width: "60px",
-                    height: "25px",
-                  }}
-                >
-                  View
-                </button>
+                <CustomizeButton  size='small'>View</CustomizeButton>
               </TableCell>
             </TableRow>
           ))}
