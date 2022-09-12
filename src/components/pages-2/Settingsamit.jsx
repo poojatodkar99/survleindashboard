@@ -1,8 +1,23 @@
+import { Box } from "@mui/material";
 import React from "react";
 import "../style-2/settingsamit.css";
 
 function Settingsamit() {
   return (
+
+
+    <Box
+    component="main"
+    sx={{
+      backgroundColor: (theme) =>
+        theme.palette.mode === "light"
+          ? theme.palette.grey[100]
+          : theme.palette.grey[900],
+      flexGrow: 1,
+      // height: "100vh",
+      // overflow: "auto",
+      marginTop: "60px",
+    }}>
     <div className="settingsamitcont">
       <div className="settingheading">
         <h2>Amit Karthikaryan</h2>
@@ -59,6 +74,7 @@ function Settingsamit() {
         </table>
       </div>
     </div>
+    </Box>
   );
 }
 

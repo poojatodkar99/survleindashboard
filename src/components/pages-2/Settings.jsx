@@ -25,7 +25,7 @@ function Settings() {
   });
 
   return (
-    <div>
+    <>
       {/* <Container>
         <Grid
           d
@@ -174,7 +174,7 @@ function Settings() {
         {/* </Grid> */}
         {/* </Container> */}
       </Box>
-    </div>
+    </>
   );
 }
 

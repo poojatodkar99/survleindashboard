@@ -42,6 +42,7 @@ import Settings from "./pages-2/Settings";
 import Notifications from "./pages-2/Notifications";
 import Transactions from "./pages-2/Transactions";
 import Voilations from "./pages-2/Voilations";
+import Rules1 from "./pages-2/Rules1";
 
 // import Deposits from './Deposits';
 // import Orders from './Orders';
@@ -111,8 +112,6 @@ const mdTheme = createTheme();
 
 function DashboardContent() {
   const [shownotif, setShownotif] = useState(false);
-
-  
 
   const [open, setOpen] = React.useState(true);
   // const [component, setComponent] = React.useState(true);
@@ -274,23 +273,29 @@ function DashboardContent() {
                 </IconButton>
                 <IconButton color="inherit">
                   <Badge badgeContent={4} color="secondary">
-                    <NotificationsActiveIcon onClick={(e)=>setShownotif(!shownotif)} />
+                    <NotificationsActiveIcon
+                      onClick={(e) => setShownotif(!shownotif)}
+                    />
                     {/* {shownotif && <Notifications />} */}
                   </Badge>
                 </IconButton>
-                <IconButton color="inherit">
-                  <RuleIcon />
-                </IconButton>
-                <IconButton color="inherit">
-                  <Link to={"/user-setting"}>
+                <Link  style={{textDecoration:"none"}} to={"/rules"}>
+                  <IconButton color="inherit">
+                    <RuleIcon />
+                  </IconButton>
+                </Link>
+
+                <Link to={"/user-setting"}>
+                  <IconButton color="inherit">
                     <SettingsIcon />
-                  </Link>
-                </IconButton>
-                <IconButton color="inherit">
-                  <Link to={"/user-profile"}>
+                  </IconButton>
+                </Link>
+
+                <Link to={"/user-profile"}>
+                  <IconButton color="inherit">
                     <AccountCircleIcon />
-                  </Link>
-                </IconButton>
+                  </IconButton>
+                </Link>
               </Stack>
             </Toolbar>
           </AppBar>
@@ -341,10 +346,17 @@ function DashboardContent() {
                     element={<Settingsamit />}
                   />
                   <Route exact path="/user-setting" element={<Settings />} />
-                  <Route exact path="/user-transaction" element={<Transactions />} />
-                  <Route exact path="/user-voilation" element={<Voilations />} />
-
-
+                  <Route
+                    exact
+                    path="/user-transaction"
+                    element={<Transactions />}
+                  />
+                  <Route
+                    exact
+                    path="/user-voilation"
+                    element={<Voilations />}
+                  />
+                  <Route exact path="/rules" element={<Rules1 />} />
 
                   <Route path="/worksheet" element={<Worksheet />} />
                   <Route path="/directive" element={<Directmanage />} />

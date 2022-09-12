@@ -128,7 +128,7 @@ function Rules1() {
           <div className="managment">
             <h4>Management</h4>
           </div>
-          <div className="UserTop">
+          <div className="UserTop" style={{backgroundColor:"#FFB200"}}>
             <h2>
               {" "}
               <KeyboardBackspaceSharpIcon />
