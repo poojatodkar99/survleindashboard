@@ -268,9 +268,11 @@ function DashboardContent() {
                 Dashboard
               </Typography>
               <Stack direction="row" spacing={2}>
-                <IconButton color="inherit">
-                  <HomeRepairServiceIcon />
-                </IconButton>
+                <Link to={"/user-calendar"}>
+                  <IconButton color="inherit">
+                    <HomeRepairServiceIcon />
+                  </IconButton>
+                </Link>
                 <IconButton color="inherit">
                   <Badge badgeContent={4} color="secondary">
                     <NotificationsActiveIcon
@@ -362,7 +364,7 @@ function DashboardContent() {
                   <Route path="/directive" element={<Directmanage />} />
 
                   <Route path="/roles" element={<Roletable />} />
-                  <Route path="/calendar" element={<Fullcalender />} />
+                  <Route path="/user-calendar" element={<Fullcalender />} />
                   <Route path="/user" element={<User />} />
                 </Routes>
               </>

@@ -44,4 +44,4 @@ const Fullcalender = () => {
   )
 }
 
-export default Fullcalender
+export default Fullcalender;
