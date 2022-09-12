@@ -1,0 +1,14 @@
+.notifcontainer {
+  border: 1px solid black;
+  width: 40%;
+  position: fixed;
+  top: 65px;
+  right: 0%;
+  background: #fff;
+  padding: 10px;
+  z-index: 9;
+}
+.notifcontainer div {
+  display: flex;
+  justify-content: space-between;
+}

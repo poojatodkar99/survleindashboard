@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+  }
+
+  .settingsform {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(179, 180, 182, 0.955);
+  }
+
+.hiddbtn .container{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px 20px;
+    padding: 20px 20px;
+}
+.container input{
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+.container label{
+    display: inline-block;
+    width: 120px;
+    margin: 10px 10px;
+}
+.settingbtns{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 20px;
+}
+.settingbtns button{
+    margin: 0px 10px;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+  .settingsform h4 {
+    margin: 5px 20px;
+    color: rgb(61, 60, 60);
+  }
+  .settingsbtn1 {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(179, 180, 182, 0.955);
+  }
+
+  .settingsbtn1 h4 {
+    margin: 5px 20px;
+    color: rgb(61, 60, 60);
+  }
+  
+  .settingsbtn2 {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(179, 180, 182, 0.955);
+  }
+
+  .settingsbtn2 h4 {
+    margin: 5px 20px;
+    color: rgb(61, 60, 60);
+  }
+  
+  .settingsbtn3 {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(179, 180, 182, 0.955);
+  }
+
+  .settingsbtn3 h4 {
+    margin: 5px 20px;
+    color: rgb(61, 60, 60);
+  }
+  
