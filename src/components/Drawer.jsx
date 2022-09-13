@@ -43,6 +43,7 @@ import Notifications from "./pages-2/Notifications";
 import Transactions from "./pages-2/Transactions";
 import Voilations from "./pages-2/Voilations";
 import Rules1 from "./pages-2/Rules1";
+import "../components/style-2/drawer.css";
 
 // import Deposits from './Deposits';
 // import Orders from './Orders';
@@ -151,7 +152,67 @@ function DashboardContent() {
             }}
           >
             <Chart />
+           
             {/* <Deposits /> */}
+            <h4>Directives</h4>
+{/* <div className="directivetable"> */}
+            <table className="directivetable" >
+              <tr>
+                <td style={{ borderBottom: "1px solid black" }}>
+                  <span>Create New Rules</span>
+                  <span>
+                    <input type="radio" name="rbtn" class="green" />
+
+                    <input type="radio" name="rbtn" class="orange" />
+
+                    <input type="radio" name="rbtn" class="red" />
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td style={{ borderBottom: "1px solid black" }}>
+                  <span> Add Names to Watchlist</span>
+                  <span>
+                    <input type="radio" name="rbtn1" class="green" />
+
+                    <input type="radio" name="rbtn1" class="orange" />
+
+                    <input type="radio" name="rbtn1" class="red" />
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td style={{ borderBottom: "1px solid black" }}>
+                  <span> Fetch Transaction Report of Last Month</span>
+                  <span>
+                    <input type="radio" name="rbtn2" class="green" />
+                    <input type="radio" name="rbtn2" class="orange" />
+                    <input type="radio" name="rbtn2" class="red" />
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td style={{ borderBottom: "1px solid black" }}>
+                  <span> Fetch Transaction Report of Last 6 Months</span>
+                  <span>
+                    <input type="radio" name="rbtn3" class="green" />
+                    <input type="radio" name="rbtn3" class="orange" />
+                    <input type="radio" name="rbtn3" class="red" />
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span> Fetch Transaction Report of 2020</span>
+                  <span>
+                    <input type="radio" name="rbtn4" class="green" />
+                    <input type="radio" name="rbtn4" class="orange" />
+                    <input type="radio" name="rbtn4" class="red" />
+                  </span>
+                </td>
+              </tr>
+            </table>
+            {/* </div> */}
           </Paper>
         </Grid>
         {/* Recent Orders */}
@@ -281,7 +342,7 @@ function DashboardContent() {
                     {/* {shownotif && <Notifications />} */}
                   </Badge>
                 </IconButton>
-                <Link  style={{textDecoration:"none"}} to={"/rules"}>
+                <Link style={{ textDecoration: "none" }} to={"/rules"}>
                   <IconButton color="inherit">
                     <RuleIcon />
                   </IconButton>
