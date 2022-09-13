@@ -372,8 +372,9 @@ function Voilations() {
                 )}
               </IconButton>
             </div>
-            <div className="managementbox1">
-              <Search>
+            {open.sec ?  <div className="managmentbox1">
+              <div >
+              <Search style={{margin:"30px",maxWidth:"400px"}} >
                 <SearchIconWrapper>
                   <SearchIcon />
                 </SearchIconWrapper>
@@ -382,8 +383,10 @@ function Voilations() {
                   inputProps={{ "aria-label": "search" }}
                 />
               </Search>{" "}
-            </div>
-            <div>{open.sec ? <DenseTable /> : ""}</div>
+              </div>
+          
+         <DenseTable /> 
+            </div>: ""}
           </div>
         {/* </Grid> */}
       {/* </Container> */}

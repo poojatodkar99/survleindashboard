@@ -39,9 +39,9 @@ export const MainListItems = (props) => {
         <ListItemIcon>
           <CurrencyExchangeIcon ontSize="small"  />
         </ListItemIcon>
-        <Link to='/user-transaction'>
+        {/* <Link to='/user-transaction'> */}
         <ListItemText secondary="Transaction" />
-        </Link>
+        {/* </Link> */}
       </ListItemButton>
       </Link>
       <Link style={{textDecoration:"none"}} to='/user-voilation'>
