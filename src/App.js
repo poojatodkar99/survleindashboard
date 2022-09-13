@@ -31,6 +31,7 @@ import Rules3 from "./components/pages-2/Rules3";
 import Settings from "./components/pages-2/Settings";
 import Settingsamit from "./components/pages-2/Settingsamit";
 import Notifications from "./components/pages-2/Notifications";
+import Chart from "./components/Chart";
 
 function App() {
   return (
