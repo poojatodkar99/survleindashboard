@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Route, Link, BrowserRouter as Router, Routes } from "react-router-dom";
-import Navbar from "../src/components/Navbar";
+// import Navbar from "../src/components/Navbar";
 // import Dashboard from "../src/components/Dashboard";
 import Dashboard from "../src/components/Drawer";
 import Worksheet from "../src/components/Worksheet";
@@ -32,6 +32,7 @@ import Settings from "./components/pages-2/Settings";
 import Settingsamit from "./components/pages-2/Settingsamit";
 import Notifications from "./components/pages-2/Notifications";
 import Chart from "./components/Chart";
+import Directmanage from "./components/pages/Directmanage";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         {/* <DenseTable /> */}
         {/* <Voilations/> */}
         {/* <Directivemgnt /> */}
+        {/* <Directmanage /> */}
         {/* <Directivemgnt1/> */}
         {/* <Directivemgnt2/> not usefull */}
         {/* <User3/> */}
