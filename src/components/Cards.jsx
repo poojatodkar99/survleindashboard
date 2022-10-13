@@ -26,12 +26,15 @@ import EnhancedTable from "./Table";
 import Countries from "./pages/Countries";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
+import { agents, beneficiary, countries, currencies, customers, customer_types, exchange, id_types, income_sources, payment, professions, services, suspicious, transaction_types } from "./secondaryIcons";
+
 
 const Cards = () => {
   const [active,setActive] = useState(false)
   const [PresentComp,setPresentComp] = useState(null)
   const navigate = useNavigate()
   const {cardname} = useParams()
+
 
   const switchComp = ()=>{
     if(cardname){ 
@@ -101,7 +104,11 @@ const Cards = () => {
     
   }
 
+  
+
+
   useEffect(switchComp,[cardname])
+  
   return (
     <>
       <Box
@@ -112,9 +119,9 @@ const Cards = () => {
               ? theme.palette.grey[100]
               : theme.palette.grey[900],
           flexGrow: 1,
-          // height: "100vh",
+          height: "100%",
           // overflow: "auto",
-          marginTop: "60px",
+          // marginTop: "60px",
           
         
           
@@ -127,66 +134,80 @@ const Cards = () => {
             <section className={active?"home-section active":"home-section"}>
               <div class="card_wrapper wrapper-1">
                 <div class="card" onClick={()=>{setActive(true); navigate("/cards/countries")}}>
-                  <BsGlobe2 /> <span className="cardName">Countries</span>{" "}
+                  {countries}<span className="cardName">Countries</span>
+                  <div className="total">05</div>
                 </div>
                 <div class="card" onClick={()=>{setActive(true); navigate("/cards/currencies")}}>
                   {" "}
-                  <AiOutlineDollarCircle /> <span className="cardName">Currencies</span>{" "}
+                  {currencies} <span className="cardName">Currencies</span>{" "}
+                  <div className="total">05</div>
                 </div>
 
                 <div class="card" onClick={()=>{setActive(true); navigate("/cards/exchange branches")}}>
                   {" "}
-                  <BsArrowLeftRight /> <span className="cardName">Exchange Branches</span>{" "}
+                  {exchange} <span className="cardName">Exchange Branches</span>{" "}
+                  <div className="total">05</div>
                 </div>
                 <div class="card" onClick={()=>{setActive(true); navigate("/cards/agent")}}>
                   {" "}
-                  <CgProfile /> <span className="cardName">Agent</span>{" "}
+                  {agents} <span className="cardName">Agent</span>{" "}
+                  <div className="total">05</div>
                 </div>
               </div>
               <div class="card_wrapper wrapper-2">
                 <div id="RowSecond" class="card" onClick={()=>{setActive(true); navigate("/cards/transaction types")}}>
                   {" "}
-                  <AiOutlineTransaction /> <span className="cardName">Transaction Types</span>{" "}
+                  {transaction_types} <span className="cardName">Transaction Types</span>{" "}
+                  <div className="total">05</div>
                 </div>
                 <div id="RowSecond" class="card" onClick={()=>{setActive(true); navigate("/cards/service types")}}>
                   {" "}
-                  <AiFillSetting /> <span className="cardName">Service Type</span>{" "}
+                  {services} <span className="cardName">Service Type</span>{" "}
+                  <div className="total">05</div>
                 </div>
                 <div id="RowSecond" class="card" onClick={()=>{setActive(true); navigate("/cards/payment modes")}}>
                   {" "}
-                  <MdPayments /> <span className="cardName">Payment Modes</span>{" "}
+                  {payment} <span className="cardName">Payment Modes</span>{" "}
+                  <div className="total">05</div>
                 </div>
               </div>
               <div class="card_wrapper wrapper-3">
                 <div class="card" onClick={()=>{setActive(true); navigate("/cards/suspicious words")}}>
                   {" "}
-                  <BsSearch /> <span className="cardName">Suspicious words</span>{" "}
+                  {suspicious} <span className="cardName">Suspicious words</span>{" "}
+                  <div className="total">05</div>
                 </div>
                 <div class="card" onClick={()=>{setActive(true); navigate("/cards/income sources")}}>
                   {" "}
-                  <GrResources  /> <span className="cardName">Income Sources</span>{" "}
+                  {income_sources} <span className="cardName">Income Sources</span>{" "}
+                  <div className="total">05</div>
                 </div>
                 <div class="card" onClick={()=>{setActive(true); navigate("/cards/id types")}}>
                   {" "}
-                  <ImProfile /> <span className="cardName">ID Types</span>{" "}
+                  {id_types} <span className="cardName">ID Types</span>{" "}
+                  <div className="total">05</div>
                 </div>
               </div>
               <div class="card_wrapper wrapper-4">
                 <div class="card" onClick={()=>{setActive(true); navigate("/cards/professions")}}>
                   {" "}
-                  <MdShoppingBag /> <span className="cardName">Professions</span>{" "}
+                  {professions} <span className="cardName">Professions</span>{" "}
+                  <div className="total">05</div>
                 </div>
                 <div class="card" onClick={()=>{setActive(true); navigate("/cards/beneficiary")}}>
                   {" "}
-                  <BsFillPeopleFill /> <span className="cardName">Beneficiary</span>{" "}
+                  {beneficiary} <span className="cardName">Beneficiary</span>{" "}
+                  <div className="total">05</div>
                 </div>
                 <div class="card" onClick={()=>{setActive(true); navigate("/cards/customer types")}}>
                   {" "}
-                  <RiShieldUserFill /> <span className="cardName">Customer Types</span>{" "}
+                  {customer_types} <span className="cardName">Customer Types</span>{" "}
+                  <div className="total">05</div>
                 </div>
                 <div class="card" onClick={()=>{setActive(true); navigate("/cards/customers")}}>
                   {" "}
-                  <FcBusinessman /> <span className="cardName">Customers</span>{" "}
+                  {customers} <span className="cardName">Customers</span>{" "}
+                  <div className="total">05</div>
                 </div>
               </div>
             </section>

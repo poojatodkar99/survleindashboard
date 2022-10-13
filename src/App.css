@@ -38,3 +38,19 @@
 }
 
  */
+
+ @font-face {
+  font-family: 'fltrl';
+  src: local('fltrl'), url(./font/FLTRL-GROTESK/OTF/FLTRL\ Grotesk\ Regular.otf) format('otf');
+  
+}
+
+*{
+  /* font-family: 'fltrl'; */
+}
+ .nav-icons button {
+  fill:#666;
+ } 
+ .nav-icons button:hover{
+  fill:#64ABEB;
+ }

@@ -5,16 +5,18 @@
 }
 .UserTop{
     background-color:#FFB200;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
 }
 .rules{
  display: flex;
 /* background: rgba(100, 165, 195, 0.726); */
 justify-content: space-between;
 align-items: center;
-height: 90px;
-/* font-size: 40px; */
-border-bottom: 1px solid black;
-background: rgba(255, 255, 255, 0.886);
+/* height: 10px; */
+margin: 20px;
+padding: 20px;
 }
 .rules span{
     display: flex;
