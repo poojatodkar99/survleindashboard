@@ -1,5 +1,5 @@
 export const agents  = <svg version="1.1" id="Layer_1"  x="0px" y="0px"
-width="30px" viewBox="0 0 814 724" enable-background="new 0 0 814 724" >
+width="20px" viewBox="0 0 814 724" enable-background="new 0 0 814 724" >
 <path fill="transparent" opacity="1.000000" stroke="none" 
 d="
 M1.000000,278.000000 
@@ -95,7 +95,7 @@ z"/>
 </svg>
 
 export const beneficiary = <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-width="30px" viewBox="0 0 803.000000 661.000000"
+width="20px" viewBox="0 0 803.000000 661.000000"
 preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,661.000000) scale(0.100000,-0.100000)"

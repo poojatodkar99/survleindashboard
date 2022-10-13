@@ -14,7 +14,8 @@
 
 .country-title{
     display:flex;
-    background-color: #ea6;
+    /* background-color: #ea6; */
+    background:linear-gradient(to right, #F1B93E , #EA9943);
     color: #fff;
     position: relative;
     justify-content: space-between;

@@ -132,84 +132,84 @@ const Cards = () => {
             {/* Chart */}
 
             <section className={active?"home-section active":"home-section"}>
-              <div class="card_wrapper wrapper-1">
-                <div class="card" onClick={()=>{setActive(true); navigate("/cards/countries")}}>
+              {/* <div class="card_wrapper wrapper-1"> */}
+                <div className="card type-1" onClick={()=>{setActive(true); navigate("/cards/countries")}}>
                   {countries}<span className="cardName">Countries</span>
                   <div className="total">05</div>
                 </div>
-                <div class="card" onClick={()=>{setActive(true); navigate("/cards/currencies")}}>
+                <div className="card type-1" onClick={()=>{setActive(true); navigate("/cards/currencies")}}>
                   {" "}
                   {currencies} <span className="cardName">Currencies</span>{" "}
                   <div className="total">05</div>
                 </div>
 
-                <div class="card" onClick={()=>{setActive(true); navigate("/cards/exchange branches")}}>
+                <div className="card type-1" onClick={()=>{setActive(true); navigate("/cards/exchange branches")}}>
                   {" "}
                   {exchange} <span className="cardName">Exchange Branches</span>{" "}
                   <div className="total">05</div>
                 </div>
-                <div class="card" onClick={()=>{setActive(true); navigate("/cards/agent")}}>
+                <div className="card type-1" onClick={()=>{setActive(true); navigate("/cards/agent")}}>
                   {" "}
                   {agents} <span className="cardName">Agent</span>{" "}
                   <div className="total">05</div>
-                </div>
+                {/* </div> */}
               </div>
-              <div class="card_wrapper wrapper-2">
-                <div id="RowSecond" class="card" onClick={()=>{setActive(true); navigate("/cards/transaction types")}}>
+              {/* <div class="card_wrapper wrapper-2"> */}
+                <div id="RowSecond" className="card type-2" onClick={()=>{setActive(true); navigate("/cards/transaction types")}}>
                   {" "}
                   {transaction_types} <span className="cardName">Transaction Types</span>{" "}
                   <div className="total">05</div>
                 </div>
-                <div id="RowSecond" class="card" onClick={()=>{setActive(true); navigate("/cards/service types")}}>
+                <div id="RowSecond" className="card type-2" onClick={()=>{setActive(true); navigate("/cards/service types")}}>
                   {" "}
                   {services} <span className="cardName">Service Type</span>{" "}
                   <div className="total">05</div>
                 </div>
-                <div id="RowSecond" class="card" onClick={()=>{setActive(true); navigate("/cards/payment modes")}}>
+                <div id="RowSecond" className="card type-2" onClick={()=>{setActive(true); navigate("/cards/payment modes")}}>
                   {" "}
                   {payment} <span className="cardName">Payment Modes</span>{" "}
                   <div className="total">05</div>
                 </div>
-              </div>
-              <div class="card_wrapper wrapper-3">
-                <div class="card" onClick={()=>{setActive(true); navigate("/cards/suspicious words")}}>
+              {/* </div> */}
+              {/* <div class="card_wrapper wrapper-3"> */}
+                <div class="card type-3" onClick={()=>{setActive(true); navigate("/cards/suspicious words")}}>
                   {" "}
                   {suspicious} <span className="cardName">Suspicious words</span>{" "}
                   <div className="total">05</div>
                 </div>
-                <div class="card" onClick={()=>{setActive(true); navigate("/cards/income sources")}}>
+                <div class="card type-3" onClick={()=>{setActive(true); navigate("/cards/income sources")}}>
                   {" "}
                   {income_sources} <span className="cardName">Income Sources</span>{" "}
                   <div className="total">05</div>
                 </div>
-                <div class="card" onClick={()=>{setActive(true); navigate("/cards/id types")}}>
+                <div class="card type-3" onClick={()=>{setActive(true); navigate("/cards/id types")}}>
                   {" "}
                   {id_types} <span className="cardName">ID Types</span>{" "}
                   <div className="total">05</div>
                 </div>
-              </div>
-              <div class="card_wrapper wrapper-4">
-                <div class="card" onClick={()=>{setActive(true); navigate("/cards/professions")}}>
+              {/* </div> */}
+              {/* <div class="card_wrapper wrapper-4"> */}
+                <div class="card type-4" onClick={()=>{setActive(true); navigate("/cards/professions")}}>
                   {" "}
                   {professions} <span className="cardName">Professions</span>{" "}
                   <div className="total">05</div>
                 </div>
-                <div class="card" onClick={()=>{setActive(true); navigate("/cards/beneficiary")}}>
+                <div class="card type-4" onClick={()=>{setActive(true); navigate("/cards/beneficiary")}}>
                   {" "}
                   {beneficiary} <span className="cardName">Beneficiary</span>{" "}
                   <div className="total">05</div>
                 </div>
-                <div class="card" onClick={()=>{setActive(true); navigate("/cards/customer types")}}>
+                <div class="card type-4" onClick={()=>{setActive(true); navigate("/cards/customer types")}}>
                   {" "}
                   {customer_types} <span className="cardName">Customer Types</span>{" "}
                   <div className="total">05</div>
                 </div>
-                <div class="card" onClick={()=>{setActive(true); navigate("/cards/customers")}}>
+                <div class="card type-4" onClick={()=>{setActive(true); navigate("/cards/customers")}}>
                   {" "}
                   {customers} <span className="cardName">Customers</span>{" "}
                   <div className="total">05</div>
                 </div>
-              </div>
+              {/* </div> */}
             </section>
 
             {PresentComp && <Grid item xs={9} md={8} lg={9}>

@@ -4,22 +4,16 @@
 
 
 
-.card_wrapper {
+/* .card_wrapper {
   width: 100%;
   height: 25%;
   min-height: 25%;
   display: flex;
-  /* grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); */
-  /* margin: 0 auto; */
-  /* max-width: 1140px; */
-  /* padding: 10px 28px; */
-  /* grid-gap: 30px; */
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  /* flex-wrap: wrap; */
   }
-  
+   */
 
 
   
@@ -32,12 +26,13 @@
     /* width: 100%; */
     width: 250px;
     cursor: pointer;
-    height: 100%;
+    /* height: 100%; */
     margin: 0;
     background: #f5f5f5;
     color: #666;
    
-    flex:auto;
+    /* flex:2fr; */
+    flex-basis: 33.33%;
     position: relative;
   }
   .card .total{
@@ -63,6 +58,12 @@
     max-height: 50px;
     border: none;
     padding: 20px 0;
+    font-size: 14px !important;
+    flex-basis: auto;
+  }
+
+.home-section.active .card svg{
+    fill: #fff;
   }
 
   .home-section.active .card .total{
@@ -75,133 +76,132 @@
     display: flex;
     align-items: center;
     border-left: 1px solid #666;
+    color: #fff;
   }
-  .card:hover {
-    /* transform: scale(1.03); */
+  .home-section.active .card:hover {
+    transform: scale(1.03);
   }
 
   .home-section{
     width: 100%;
     height: calc(100vh - 60px);
     /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .home-section.active{
     width: auto;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     /* width: 300px; */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     /* margin-top: 8pt; */
-
+    flex-wrap: nowrap;
   }
-  .home-section.active .card_wrapper{
-    /* grid-gap: 10px; */
+  /* .home-section.active {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: auto;
     height: auto;
-    /* grid-template-columns: 1fr; */
     padding: 0px;
     width: 300px;
-    /* border: 1px solid red; */
-    /* border: 1px solid black; */
-}
-
-.home-section.active .card_wrapper div{
-    height: 40px;
-    margin: 0px 0;
-    width: 100%;
-  }
+} */
   
-  .home-section .card_wrapper .card{
+  .home-section  .card{
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 20px;
-    transition: 0.3s;
-  
-    
+    transition: 0.3s; 
   }
 
-  .home-section.active .card_wrapper .card{
+  .home-section.active  .card{
     border-radius: 0px;
     padding-left: 10px;
     justify-content: left;
     font-size: 20px;
-    border-bottom: 1px solid #fff;
+    align-self: stretch;
+    min-height: 7.1%;
+    margin: 0px 0;
+    padding: 0 10px;
+    /* border-bottom: 1px solid #fff; */
+    color: #fff;
   }
-  .home-section .card_wrapper .card span{
+  .home-section  .card span{
     margin: 0 15px;
   }
 
   
-   .wrapper-1 .card .total{
+  .type-1.card .total{
     background: #F1B93E;
-    /* color: #fff; */
-
-  
   }
-  .wrapper-1 .card:hover, .wrapper-1 .card:hover svg{
+  .home-section.active .type-1:nth-child(4), 
+  .home-section.active .type-2:nth-child(3), 
+  .home-section.active .type-3:nth-child(4){
+    border-bottom: 1px solid #666 ;
+  }
+  
+  .type-1.card:hover, .type-1.card:hover svg{
     /* background: #fff; */
     color:  #F1B93E;
     fill:  #F1B93E;
   }
-  .wrapper-1 .card:hover .total{
+  .type-1.card:hover .total{
     color: #fff;
   }
-  .home-section.active .wrapper-1 .card{
+  .home-section.active .type-1.card{
       background:  #F1B93E;
   }
   
-  .wrapper-2 .card .total{
+  .type-2.card .total{
     background: #90B624;
     /* color: #444; */
   }
   
-  .wrapper-2 .card:hover, .wrapper-2 .card:hover svg{
+  .type-2.card:hover, .type-2.card:hover svg{
   /* background: #fff; */
   color:#90B624;
   fill:#90B624;
   }
-  .wrapper-2 .card:hover .total{
+  .type-2.card:hover .total{
     color: #fff;
   }
-  .home-section.active .wrapper-2 .card{
+  .home-section.active .type-2.card{
     background:#90B624;
   }
   
-  .wrapper-3 .card .total{
+  .type-3.card .total{
     background: #64ABEB;
   }
 
-  .wrapper-3 .card:hover, .wrapper-3 .card:hover svg{
+  .type-3.card:hover, .type-3.card:hover svg{
     /* background: #fff; */
     color: #64ABEB;
     fill: #64ABEB;
   }
-  .wrapper-3 .card:hover .total{
+  .type-3.card:hover .total{
     color: #fff;
   }
-  .home-section.active .wrapper-3 .card{
+  .home-section.active .type-3.card{
       background: #64ABEB;
   }
   
-  .wrapper-4 .card .total{
+  .type-4.card .total{
     background: #AD94F5;
   }
   
-  .wrapper-4 .card:hover, .wrapper-4 .card:hover svg{
+  .type-4.card:hover, .type-4.card:hover svg{
     /* background: #fff; */
     color: #AD94F5;
     fill: #AD94F5;
   }
-  .wrapper-4 .card:hover .total{
+  .type-4.card:hover .total{
     color: #fff;
   }
-  .home-section.active .wrapper-4 .card{
+  .home-section.active .type-4.card{
       background: #AD94F5;
   }
   
@@ -212,8 +212,9 @@
   }
 
   .card svg{
-    width: 30px;
+    width: 20px;
   }
+  
   .home-section.active .card:hover, .home-section.active .card:hover svg{
     color: #fff;
     fill: #fff;
@@ -226,12 +227,12 @@
   } */
 
   @media screen and (max-width:1072px) {
-    .home-section.active .card_wrapper .card .cardName{
+    .home-section.active .card .cardName{
 
       display: none;
     }
-    .home-section.active .card_wrapper .card{
-      width:50px
+    .home-section.active .card{
+      width:100px
     }
     
   
