@@ -22,7 +22,7 @@ export const MainListItems = (props) => {
             <svg
               version="1.0"
               xmlns="http://www.w3.org/2000/svg"
-              width="30.000000px"
+              width="20.000000px"
               viewBox="0 0 710.000000 716.000000"
               preserveAspectRatio="xMidYMid meet"
             >
@@ -58,7 +58,7 @@ export const MainListItems = (props) => {
             <svg
               version="1.0"
               xmlns="http://www.w3.org/2000/svg"
-              width="30.000000px"
+              width="20.000000px"
               viewBox="0 0 586.000000 721.000000"
               preserveAspectRatio="xMidYMid meet"
             >
@@ -89,7 +89,7 @@ export const MainListItems = (props) => {
             <svg
               version="1.0"
               xmlns="http://www.w3.org/2000/svg"
-              width="30.000000px"
+              width="20.000000px"
               viewBox="0 0 661.000000 641.000000"
               preserveAspectRatio="xMidYMid meet"
             >
@@ -124,7 +124,7 @@ c-69 -71 -318 -323 -555 -560 l-430 -433 375 0 375 1 700 696 700 695 -725
             <svg
               version="1.0"
               xmlns="http://www.w3.org/2000/svg"
-              width="30.000000px"
+              width="20.000000px"
               viewBox="0 0 863.000000 890.000000"
               preserveAspectRatio="xMidYMid meet"
             >
@@ -161,7 +161,7 @@ c-69 -71 -318 -323 -555 -560 l-430 -433 375 0 375 1 700 696 700 695 -725
             <svg
               version="1.0"
               xmlns="http://www.w3.org/2000/svg"
-              width="30.000000px"
+              width="20.000000px"
               viewBox="0 0 774.000000 653.000000"
               preserveAspectRatio="xMidYMid meet"
             >
